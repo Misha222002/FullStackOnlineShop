@@ -45,8 +45,8 @@ class basketController {
         where: { id },
       });
       const basket = await BasketDevice.findOne({ where: { id } });
-      if(basket.count == 0){
-        await basket.destroy()
+      if (basket.count == 0) {
+        await basket.destroy();
       }
       return res.json(basket);
     } catch (e) {
